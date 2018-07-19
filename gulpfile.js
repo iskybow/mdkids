@@ -44,6 +44,7 @@ gulp.task('js', function () {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/assets/js'))
 });
+
 gulp.task('libs', function () {
   return gulp.src('./src/libs/**/*')
     .pipe(gulp.dest('./dist/assets/libs'))
@@ -51,10 +52,17 @@ gulp.task('libs', function () {
       stream: true
     }));
 });
+
 gulp.task('images', function () {
   return gulp.src('./src/images/**/*')
     .pipe(gulp.dest('./dist/assets/images'));
 });
+
+gulp.task('fonts', function () {
+  return gulp.src('./src/fonts/**/*')
+    .pipe(gulp.dest('./dist/assets/fonts'));
+});
+
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
@@ -85,6 +93,7 @@ gulp.task('pug-build', function () {
     .pipe(gulpPugBeautify({omit_empty: false}))
     .pipe(gulp.dest('./build'));
 });
+
 gulp.task('css-build', function () {
   gulp.src(['./src/shared/sass/**/*.sass', './src/components/**/*.sass'])
     .pipe(plumber())
@@ -97,6 +106,7 @@ gulp.task('css-build', function () {
     }))
     .pipe(gulp.dest('./build/assets/css'));
 });
+
 gulp.task('js-build', function () {
   gulp.src(['./src/shared/js/**/*.js', './src/components/**/*.js'])
     .pipe(plumber())
@@ -109,16 +119,23 @@ gulp.task('js-build', function () {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./build/assets/js'))
 });
+
 gulp.task('libs-build', function () {
   return gulp.src('./src/libs/**/*')
     .pipe(gulp.dest('./build/assets/libs'));
 });
+
 gulp.task('images-build', function () {
   return gulp.src('./src/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./build/assets/images'));
 });
 
+gulp.task('fonts-build', function () {
+  return gulp.src('./src/fonts/**/*')
+    .pipe(gulp.dest('./build/assets/fonts'));
+});
+
 // Commands
-gulp.task('build', ['pug-build', 'css-build', 'js-build', 'libs-build', 'images-build']);
-gulp.task('default', ['watch', 'libs', 'images', 'browser-sync']);
+gulp.task('build', ['pug-build', 'css-build', 'js-build', 'libs-build', 'images-build', 'fonts-build']);
+gulp.task('default', ['watch', 'libs', 'images', 'fonts', 'browser-sync']);

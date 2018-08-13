@@ -1,17 +1,19 @@
 'use strict';
 
 const gulp = require('gulp'),
-      sass = require('gulp-sass'),
-      babel = require('gulp-babel'),
-      concat = require('gulp-concat'),
-      pug = require('gulp-pug'),
-      browserSync = require('browser-sync').create(),
-      plumber = require('gulp-plumber'),
-      sourcemaps = require('gulp-sourcemaps'),
-      gulpPugBeautify = require('gulp-pug-beautify'),
-      autoprefixer = require('gulp-autoprefixer'),
-      uglify = require('gulp-uglify'),
-      imagemin = require('gulp-imagemin');
+  sass = require('gulp-sass'),
+  babel = require('gulp-babel'),
+  concat = require('gulp-concat'),
+  pug = require('gulp-pug'),
+  browserSync = require('browser-sync').create(),
+  plumber = require('gulp-plumber'),
+  sourcemaps = require('gulp-sourcemaps'),
+  gulpPugBeautify = require('gulp-pug-beautify'),
+  autoprefixer = require('gulp-autoprefixer'),
+  uglify = require('gulp-uglify'),
+  imagemin = require('gulp-imagemin'),
+  svgstore = require('gulp-svgstore'),
+  svgmin = require('gulp-svgmin');
 
 // For developing
 gulp.task('pug', function () {
@@ -77,12 +79,48 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch', ['pug', 'css', 'js'], function () {
-  gulp.watch(['src/components/**/*.pug'], ['pug']);
-  gulp.watch(['src/components/**/*.sass', './src/shared/sass/**/*.sass'], ['css']);
-  gulp.watch(['src/components/**/*.js', './src/shared/js/**/*.js'], ['js']);
-  gulp.watch(['src/pages/*'], ['pug']);
+  gulp.watch(['src/components/**/*.pug', 'src/pages/*'], ['pug']).on('change', browserSync.reload);
+  gulp.watch(['src/components/**/*.sass', './src/shared/sass/**/*.sass'], ['css']).on('change', browserSync.reload);
+  gulp.watch(['src/components/**/*.js', './src/shared/js/**/*.js'], ['js']).on('change', browserSync.reload);
 
   gulp.watch('./dist/*').on('change', browserSync.reload);
+});
+
+// building svg sprite if needed, then add 'svg-sprite' to build or default
+gulp.task('svg-grayscale', function () {
+
+  return gulp.src('./src/images/svg/*.svg')
+    .pipe(cheerio({
+      run: function ($) {
+        let fill = $('[fill]:not(.fill)');
+        let style = $('[style]');
+        let stroke = $('[stroke]');
+        for (let i = 0; i < fill.length; i++) {
+          fill[i].removeAttribute('fill');
+        }
+        for (let j = 0; j < style.length; j++) {
+          style[j].removeAttribute('style');
+        }
+        for (let k = 0; k < stroke.length; k++) {
+          stroke[k].removeAttribute('stroke');
+        }
+      },
+      parserOptions: {
+        xmlMode: true
+      }
+    }))
+    .pipe(gulp.dest('./src/images/svg'));
+
+});
+
+
+gulp.task('svg-sprite', ['svg-grayscale'], function () {
+
+  return gulp.src('./src/images/svg/*.svg')
+    .pipe(svgmin())
+    .pipe(svgstore())
+    .pipe(gulp.dest('./dist/assets/images'));
+
 });
 
 // For building

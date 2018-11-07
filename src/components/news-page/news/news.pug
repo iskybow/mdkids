@@ -192,17 +192,19 @@ mixin news()
       +b.pagination
         +e('ul').ul
           +e('li').ul__prev
-            +e('a')(href='#') Предыдущая
+            +e('a')(href='#')
+              +e('img')(src='assets/images/icons/right-arrow.svg' alt='' width='12' height='8')
+              +b('span').pagination-bnt Предыдущая
           +e('li').ul__li
             +e('a')(href='#')
               +e('span') 1
           +e('li').ul__li.pagination-active
             +e('a')(href='#')
               +e('span') 2
-          +e('li').ul__li
+          +e('li').ul__li.width475
             +e('a')(href='#')
               +e('span' ) 3
-          +e('li').ul__li
+          +e('li').ul__li.width992
             +e('a')(href='#')
               +e('span') 4
           +e('li').ul__li
@@ -211,11 +213,13 @@ mixin news()
           +e('li').ul__li
             +e('a')(href='#')
               +e('span') 12
-          +e('li').ul__li
+          +e('li').ul__li.width992
             +e('a')(href='#')
               +e('span') 13
-          +e('li').ul__li
+          +e('li').ul__li.width992
             +e('a')(href='#')
               +e('span') 14
           +e('li').ul__next
-            +e('a')(href='#') Следующая
+            +e('a')(href='#')
+              +b('span').pagination-bnt Следующая
+              +e('img')(src='assets/images/icons/right-arrow.svg' alt='' width='12' height='8')

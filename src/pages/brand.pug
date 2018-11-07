@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/brand-page/brand/brand
+include ../components/footer/footer
+
+block head
+  - var pageTitle = 'Main';
+
+block content
+  +header()
+  +brand()
+  +footer()

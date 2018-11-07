@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/contacts-page/contacts/contacts
+include ../components/footer/footer
+
+block head
+  - var pageTitle = 'Main';
+
+block content
+  +header()
+  +contacts()
+  +footer()

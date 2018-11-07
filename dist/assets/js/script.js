@@ -8,8 +8,11 @@ var Shared = function Shared() {
 
 window.onload = function (e) {
   //dropdown
-  $('.jsDropOpen').hover(function () {
-    $(this).parent('li').children('.drop-menu').toggleClass('drop-active');
+  $('.jsDropOpen').mouseenter(function () {
+    $(this).parent('li').children('.drop-menu').addClass('drop-active');
+  });
+  $('.jsDropClose').mouseleave(function () {
+    $(this).parent('li').children('.drop-menu').removeClass('drop-active');
   });
 
   //search

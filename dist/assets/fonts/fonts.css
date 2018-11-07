@@ -25,3 +25,10 @@
   font-weight: 400;
   src: url(../fonts/Cormorant-Book.otf) format('opentype');
 }
+
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MullerMedium.otf) format('opentype');
+}

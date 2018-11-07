@@ -1,0 +1,36 @@
+mixin contacts()
+  +b('section').contacts
+    +b('hr').pages-hr
+    +b.head
+      +e('hr')
+      +e.circle
+      +e('h2') Контакты
+      +e.circle
+      +e('hr')
+    +b.container
+      +b.contacts-block.m-1
+        +e.left
+          +e.left__item
+            +e.left__item__image
+              +e('img')(src='assets/images/icons/map-placeholder.svg' alt='')
+            +e('span') мкр. Ботанический сад, д.22,<br> офис 31, Алматы, Казахстан
+          +e.left__item
+            +e.left__item__image
+              +e('img')(src='assets/images/icons/call-answer.svg' alt='')
+            +b('a')(href='tel:+77273390329').contacts-phone +7 (727) 339 - 03 - 29
+          +e.left__item
+            +e.left__item__image
+              +e('img')(src='assets/images/icons/mail.svg' alt='')
+            +e('a')(href='mailto:info@alcor.kz') info@alcor.kz
+          +e.left__item
+            +e.left__item__image
+              +e('img')(src='assets/images/icons/clock.svg' alt='')
+            +e('span') Пн - Пт 9:00 - 18:00<br> Сб - Вс Выходные
+
+        +e('form').right
+          +e('h3').right__head У вас остались вопросы?
+          +e('input')(type='text' name='name' placeholder='Ваше имя*')
+          +e('input')(type='tel' name='phone' placeholder='Номер телефона*')
+          +e('input')(type='text' name='mail' placeholder='Email*')
+          +e('textarea')(placeholder='Текст сообщения*')
+          +e('button')(type='submit') Отправить

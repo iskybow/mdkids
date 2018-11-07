@@ -1,0 +1,45 @@
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 100px
+  padding: 0 40px
+  background-color: #282828
+  &__left
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+    color: #ffffff
+    list-style: none
+    & li
+      position: relative
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+    & a
+      margin: 0
+      font-family: 'Cormorant', serif
+      font-size: 13px
+      font-weight: 400
+      letter-spacing: 0.65px
+      color: inherit
+      text-transform: uppercase
+      cursor: pointer
+  & > a
+    margin-left: auto
+    margin-right: 190px
+    font-family: 'Cormorant', serif
+    font-size: 13px
+    font-weight: 400
+    letter-spacing: 0.65px
+    color: #ffffff
+    cursor: pointer
+    @media (max-width: 1200px)
+      margin: 0
+  & > span
+    font-family: 'Cormorant', serif
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.35px
+    color: #ffffff

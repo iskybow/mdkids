@@ -1,0 +1,43 @@
+.about-brand
+  display: block
+  & .container
+    justify-content: space-between
+    @media (max-width: 992px)
+      align-items: flex-start
+    @media (max-width: 768px)
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+.about-brand-text
+  width: 500px
+  margin-right: 160px
+  @media (max-width: 1200px)
+    width: 400px
+    margin-right: 50px
+  @media (max-width: 992px)
+    width: 48%
+    margin-right: 0
+  @media (max-width: 768px)
+    width: 100%
+  & p
+    font-family: 'Cormorant', serif
+    font-size: 24px
+    font-weight: 700
+    margin: 0 0 40px
+  & span
+    font-family: 'Cormorant', serif
+    font-size: 18px
+    font-weight: 700
+    color: #9e9d9d
+
+.about-brand-image
+  @media (max-width: 992px)
+    width: 48%
+  @media (max-width: 768px)
+    width: 100%
+    margin-top: 30px
+  & img
+    @media (max-width: 992px)
+      width: 100%
+      height: auto

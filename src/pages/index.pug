@@ -1,6 +1,18 @@
 extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/main/banner/banner
+include ../components/main/collections/collections
+include ../components/main/about-brand/about-brand
+include ../components/main/main-news/main-news
+include ../components/footer/footer
 
 block head
-    - var pageTitle = 'Index Page';
+    - var pageTitle = 'Main';
 
 block content
+  +header()
+  +banner()
+  +collections()
+  +about-brand()
+  +main-news()
+  +footer()

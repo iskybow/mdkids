@@ -1,0 +1,64 @@
+mixin header()
+  +b('header').header
+    +b.header-contacts
+      +e.left
+        +e('a')(href='tel:88311234567') 8 (831) 123-45-67
+          +e('img')(src='assets/images/icons/call-answer.svg' alt='')
+        +e('a')(href='mailto:info@matthewdanielkidsjewellery.ru') info@matthewdanielkidsjewellery.ru
+          +e('img')(src='assets/images/icons/mail.svg' alt='')
+        +e('a')(href='') Instagtam
+          +e('img')(src='assets/images/icons/insta.svg' alt='')
+      +e.right
+        +e('a')(href='') Вход
+        +e('hr')
+        +e('a')(href='') Регистрация
+    +b('hr')
+    +b.nav-menu
+      +e('ul').left
+        +b('li').pc-item
+          +e('a')(href='#') о бренде
+        +b('li').mob-item
+          +b('p').jsDropOpen о компании
+            img(src='assets/images/arrow.png' alt='')
+          +b('ul').drop-menu
+            +e('li')
+              +e('a')(href='#') о бренде
+            +e('li')
+              +e('a')(href='#') партнеры
+            +e('li')
+              +e('a')(href='news.html') новости
+        +e('li')
+          +b('p').jsDropOpen коллекции
+            img(src='assets/images/arrow.png' alt='')
+          +b('ul').drop-menu
+            +e('li')
+              +e('a')(href='#') link
+            +e('li')
+              +e('a')(href='#') link
+            +e('li')
+              +e('a')(href='#') link
+            +e('li')
+              +e('a')(href='#') link
+        +b('li').pc-item
+          +e('a')(href='#') партнеры
+        +b('li').pc-item
+          +e('a')(href='news.html') новости
+        +e('li')
+          +e('a')(href='#') контакты
+      +e('a')(href='/')
+        +e('img')(src='assets/images/logo.png' alt='')
+      +e.right
+        +e.right__land
+          +e('select')
+            +e('option') Rus
+            +e('option') En
+        +e.right__search
+          +b.seach-block.jsSearchBlock
+            +e('input')(type='text' placeholder='Поиск')
+            +e('a')(href='#')
+              img(src='assets/images/icons/search.svg' alt='')
+          +b('img')(src='assets/images/icons/magnifying-glass.svg' alt='').jsSearch
+        +e.right__basket
+          +e('a')(href='#')
+            img(src='assets/images/icons/basket.png' alt='')
+            +e('span') (3)

@@ -1,0 +1,62 @@
+.main-news
+	display: block
+
+
+.main-news-items
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  width: 100%
+  &__item
+    display: flex
+    flex-direction: column
+    width: 300px
+    margin: 25px
+    @media (max-width: 1200px)
+      width: 30%
+      margin: 10px
+    @media (max-width: 992px)
+      width: 44%
+    @media (max-width: 576px)
+      width: 50%
+    &__image
+      width: 300px
+      height: 400px
+      overflow: hidden
+      @media (max-width: 1200px)
+        width: 100%
+      @media (max-width: 768px)
+        height: auto
+      & img
+        width: 100%
+        object-position: top
+    & p
+      font-family: 'Cormorant', serif
+      font-size: 24px
+      font-weight: 700
+      line-height: 27px
+    & span
+      font-family: 'Cormorant-Book', serif
+      font-size: 16px
+      font-weight: 400
+      line-height: 25px
+      color: #a9a9a9
+    &__links
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 40px
+      & a
+        font-family: 'Cormorant', serif
+        font-size: 17px
+        font-weight: 700
+        color: #895a96
+        & img
+          margin-left: 10px
+      & time
+        margin-left: auto
+        margin-right: 30px
+        font-family: 'Cormorant', serif
+        font-size: 18px
+        font-weight: 700
+        color: #a9a9a9

@@ -1,0 +1,215 @@
+.header
+  display: block
+  & > hr
+    width: 100%
+    height: 1px
+    margin: 0
+    background-color: #e8e8e8
+    border: none
+
+.header-contacts
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin: 0 40px
+  padding: 18px 0
+  @media (max-width: 576px)
+    flex-direction: column
+  &__left
+    display: flex
+    @media (max-width: 992px)
+      flex-direction: column
+      align-items: center
+    @media (max-width: 576px)
+      margin-bottom: 10px
+    & a
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      margin-right: 50px
+      font-family: 'Cormorant', serif
+      font-weight: 400
+      font-size: 16px
+      @media (max-width: 992px)
+        margin: 5px 0
+      &:last-child
+        margin-right: 0
+      & img
+        width: 15px
+        height: 15px
+        margin-right: 10px
+  &__right
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 200px
+    & hr
+      width: 2px
+      height: 16px
+      margin: 0
+      background-color: #939393
+      border: none
+    & a
+      font-family: 'Cormorant', serif
+      font-weight: 400
+      font-size: 16px
+
+.nav-menu
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin: 0 40px
+  padding: 25px 0
+  &__left
+    display: flex
+    align-items: center
+    width: 48%
+    margin: 0
+    padding: 0
+    list-style: none
+    & li
+      position: relative
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+    & .mob-item
+      display: none
+      @media (max-width: 1250px)
+        display: block
+    & .pc-item
+      display: block
+      @media (max-width: 1250px)
+        display: none
+    & p, a
+      margin: 0
+      font-family: 'Cormorant', serif
+      font-size: 14px
+      font-weight: 700
+      color: inherit
+      text-transform: uppercase
+      cursor: pointer
+    & p
+      display: flex
+      align-items: center
+      & img
+        margin-left: 10px
+    & .drop-menu
+      position: absolute
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 100%
+      margin-top: 10px
+      padding: 0
+      opacity: 0
+      background-color: #ffffff
+      border: 1px solid #e8e8e8
+      list-style: none
+      transition: all ease 1s
+      & li
+        width: 100%
+        margin: 0
+        &:hover
+          background-color: #e8e8e8
+        & a
+          width: 100%
+          padding: 10px 0
+          display: block
+          border-bottom: 1px solid #e8e8e8
+          text-align: center
+          &:last-child
+            border: none
+  & > a
+    display: flex
+    justify-content: center
+    @media (max-width: 1200px)
+      width: 33%
+  &__right
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48%
+    &__land
+      position: relative
+      margin-right: 40px
+      @media (max-width: 1200px)
+        margin-right: 30px
+      & select
+        border: none
+        cursor: pointer
+        outline: none
+      &:after
+        content: ''
+        position: absolute
+        top: 5px
+        right: 0
+        width: 15px
+        height: 10px
+        background: #ffffff url("../images/arrow.png") no-repeat 50% 50%
+        pointer-events: none
+    &__search
+      position: relative
+      display: flex
+      align-items: center
+      margin-right: 40px
+      @media (max-width: 1200px)
+        margin-right: 30px
+      & > img
+        width: 25px
+        height: 25px
+        transition: all ease 1s
+        cursor: pointer
+    &__basket
+      display: flex
+      align-items: center
+      & img
+        width: 24px
+        height: 20px
+        margin-right: 5px
+      & a
+        display: flex
+        font-family: 'Cormorant', serif
+        font-size: 18px
+        font-weight: 700
+        & span
+          margin-left: 5px
+          color: #723b82
+
+.seach-block
+  position: absolute
+  right: 45px
+  display: flex
+  align-items: center
+  max-width: 0
+  overflow: hidden
+  transition: all ease 1s
+  & input
+    width: 160px
+    padding: 11px 40px 11px 20px
+    font-family: 'Cormorant', serif
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: 0.5px
+    border-radius: 25px
+    border: 1px solid #e8e8e8
+    outline: none
+  & a
+    position: absolute
+    right: 15px
+    & img
+      width: 15px
+      height: 15px
+
+.search-btn-hide
+  opacity: 0
+  transition: all ease 1s
+
+.search-active
+  max-width: 222px
+  transition: all ease 1s
+
+.drop-active
+  opacity: 1 !important
+  z-index: 3
+  transition: all ease 1s

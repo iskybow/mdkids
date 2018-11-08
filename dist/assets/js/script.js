@@ -38,6 +38,7 @@ window.onload = function (e) {
   $('.jsSearchOpen').click(function () {
     $('.jsSearchOpen').addClass('search-open-noactive');
     $('.search-block input').addClass('search-active');
+    $('.search-block a').addClass('search-btn-input');
     setTimeout(function () {
       $('.search-block input').addClass('searchFlag');
     }, 2000);
@@ -52,6 +53,8 @@ window.onload = function (e) {
       // и не по его дочерним элементам
       input.removeClass('search-active'); // скрываем его
       $('.jsSearchOpen').removeClass('search-open-noactive');
+      $('.search-block input').removeClass('search-active');
+      $('.search-block a').removeClass('search-btn-input');
       input.removeClass('searchFlag');
     }
   });

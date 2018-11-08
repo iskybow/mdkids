@@ -9,9 +9,9 @@ mixin header()
         +e('a')(href='') Instagtam
           +e('img')(src='assets/images/icons/insta.svg' alt='')
       +e.right
-        +e('a')(href='') Вход
+        +e('a')(href='#') Вход
         +e('hr')
-        +e('a')(href='') Регистрация
+        +e('a')(href='#') Регистрация
     +b('hr')
     +b.nav-menu
       +b.mob-menu.jsMobMenu
@@ -20,6 +20,10 @@ mixin header()
         +e('span')
       +b.overlay
       +e('ul').left.jsMenu
+        +b('li').mob-login
+          +e('a')(href='#') Вход
+        +b('li').mob-login
+          +e('a')(href='#') Регистрация
         +b('li').pc-item
           +e('a')(href='brand.html') о бренде
         +b('li').mob-item.jsParentDropMenu
@@ -33,7 +37,7 @@ mixin header()
             +e('li')
               +e('a')(href='news.html') новости
         +b('li').jsParentDropMenu
-          +b('p').jsDropOpen коллекции
+          +b('p').hover-menu.jsDropOpen коллекции
             img(src='assets/images/arrow.png' alt='')
             img(src='assets/images/icons/down-arrow.svg' alt='')
           +b('ul').drop-menu.jsDropClose

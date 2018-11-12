@@ -1,0 +1,58 @@
+mixin similar-products()
+  +b('section').similar-products
+    +b.head.m-1
+      +e('hr').big-head
+      +e.circle
+      +e('h2') Похожие товары
+      +e.circle
+      +e('hr').big-head
+    +b.container
+      +b.collections-items.similar-items.jsSliderProduct
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_1.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_2.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_3.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_1.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_2.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_3.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р

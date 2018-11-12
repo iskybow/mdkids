@@ -43,7 +43,8 @@
     "npm": "^6.2.0"
   },
   "dependencies": {
-    "jquery.dotdotdot": "^3.2.2"
+    "jquery.dotdotdot": "^3.2.2",
+    "slick-carousel": "^1.8.1"
   },
   "description": ""
 }

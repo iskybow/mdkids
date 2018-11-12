@@ -1,0 +1,93 @@
+mixin category-block()
+  +b('section').category-block
+    +b('hr').pages-hr
+    +b.head
+      +e('hr')
+      +e.circle
+      +e('h2') Серьги
+      +e.circle
+      +e('hr')
+    +b.container.m-1
+      +b.collections-items.similar-items
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_1.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_2.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_3.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_1.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_2.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+        +e('a')(href='product.html').item
+          +e.item__image
+            +e('img')(src='assets/images/collections_item_3.png')
+          +e.item__text
+            +e('h3') Бабочка
+            +b.price-block
+              +b('span').old-price 14 563 р
+              +b('span').real-price 10 750 р
+      +b.pagination
+        +e('ul').ul
+          +e('li').ul__prev
+            +e('a')(href='#')
+              +e('img')(src='assets/images/icons/right-arrow.svg' alt='' width='12' height='8')
+              +b('span').pagination-bnt Предыдущая
+          +e('li').ul__li
+            +e('a')(href='#')
+              +e('span') 1
+          +e('li').ul__li.pagination-active
+            +e('a')(href='#')
+              +e('span') 2
+          +e('li').ul__li.width475
+            +e('a')(href='#')
+              +e('span' ) 3
+          +e('li').ul__li.width992
+            +e('a')(href='#')
+              +e('span') 4
+          +e('li').ul__li
+            +e('a')(href='#')
+              +e('span') ...
+          +e('li').ul__li
+            +e('a')(href='#')
+              +e('span') 12
+          +e('li').ul__li.width992
+            +e('a')(href='#')
+              +e('span') 13
+          +e('li').ul__li.width992
+            +e('a')(href='#')
+              +e('span') 14
+          +e('li').ul__next
+            +e('a')(href='#')
+              +b('span').pagination-bnt Следующая
+              +e('img')(src='assets/images/icons/right-arrow.svg' alt='' width='12' height='8')

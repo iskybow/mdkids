@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/single-news-page/single-news/single-news
+include ../components/footer/footer
+
+block head
+  - var pageTitle = 'Main';
+
+block content
+  +header()
+  +single-news()
+  +footer()

@@ -13,6 +13,14 @@ window.onload = function(e){
     });
   }
 
+  $(document).click( function(event){
+    if( $(event.target).closest(".jsParentDropMenu").length )
+      return;
+    $('.drop-menu').removeClass('drop-active');
+    event.stopPropagation();
+  });
+
+
   $('.jsMobMenu').click(function () {
     $('.jsMenu').toggleClass('menu-active');
     $('.overlay').fadeToggle();

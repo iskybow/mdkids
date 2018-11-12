@@ -1,0 +1,48 @@
+mixin product()
+  +b('section').product
+    +b('hr').pages-hr
+    +b.head
+      +e('hr')
+      +e.circle
+      +e('h2') Подвески
+      +e.circle
+      +e('hr')
+    +b.container.m-1
+      +b.product-image
+        +b.product-slider.jsNavSlider
+          +e.image-block
+            +e('img')(src='assets/images/collections_item_1.png' alt='')
+          +e.image-block
+            +e('img')(src='assets/images/collections_item_2.png' alt='')
+          +e.image-block
+            +e('img')(src='assets/images/collections_item_3.png' alt='')
+        +b.product-big-image.jsForSlider
+          +e('figure').link
+            +e('a')(href="assets/images/collections_item_1.png" data-size="330x270")
+            +e('img')(src='assets/images/collections_item_1.png' alt='')
+          +e('figure').link
+            +e('a')(href="assets/images/collections_item_2.png" data-size="330x270")
+            +e('img')(src='assets/images/collections_item_2.png' alt='')
+          +e('figure').link
+            +e('a')(href="assets/images/collections_item_3.png" data-size="330x270")
+            +e('img')(src='assets/images/collections_item_3.png' alt='')
+      +b.product-info
+        +e('p') Артикул:
+          +e('span') R2506-RG030051-R17
+        +e('p') Металл:
+          +e('span') Золото 585
+        +e('p') Вес:
+          +e('span') 3.01 г.
+        +e('p') Цвет металла:
+        +e.radio-btn
+          +e('label') Белый
+            +e('input')(type='radio' name='color')
+          +e('label') Желтый
+            +e('input')(type='radio' name='color')
+        +e('p') Размер:
+          +e('span') 16.5 17
+        +e('span') В редких случаях украшение может незначительно отличаться от представленного на фото
+        +e.price
+          +b('span').line-through 14 568 р
+          +b('span') 12 500 р
+        +e('button').btn Добавить в корзину

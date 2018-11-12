@@ -1,0 +1,16 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/product-page/product/product
+include ../components/product-page/similar-products/similar-products
+include ../components/main/main-news/main-news
+include ../components/footer/footer
+
+block head
+  - var pageTitle = 'Main';
+
+block content
+  +header()
+  +product()
+  +similar-products()
+  +main-news()
+  +footer()

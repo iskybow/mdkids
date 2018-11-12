@@ -113,7 +113,7 @@
       transform: translateX(-550px)
     @media (max-width: 576px)
       width: 100vw
-      transform: translateX(-550px)
+      transform: translateX(-600px)
     & li
       position: relative
       margin-right: 20px
@@ -279,12 +279,13 @@
   display: flex
   align-items: center
   justify-content: center
-  width: 43px
+  width: auto
   height: 43px
   transition: all ease 1s
   &__search-open
+    position: absolute
     display: block
-    width: 100%
+    width: 43px
     height: 100%
     z-index: 3
     cursor: pointer
@@ -300,6 +301,9 @@
     border: 1px solid #e8e8e8
     outline: none
     transition: all ease 1s
+    @media (min-width: 993px)
+      position: relative
+      right: 0
     &::-webkit-input-placeholder /* Chrome/Opera/Safari */
       opacity: 0
     &::-moz-placeholder /* Firefox 19+ */
@@ -313,13 +317,21 @@
     right: 14px
     line-height: 1
     transition: all ease 1s
+    @media (max-width: 992px)
+      right: -7px
     & img
       width: 15px
       height: 15px
 
 .search-btn-input
-  right: -110px !important
+  right: -75px !important
   transition: all ease 1s
+  @media (min-width: 993px)
+    right: 15px !important
+  @media (max-width: 992px)
+    right: 14px !important
+  @media (max-width: 768px)
+    right: -130px !important
 
 .search-open-noactive
   display: none
@@ -329,10 +341,14 @@
   transition: all ease 1s
 
 .search-active
-  max-width: 230px !important
-  min-width: 230px
+  max-width: 160px !important
   padding: 11px 40px 11px 20px !important
   transition: all ease 1s
+  @media (min-width: 769px)
+    right: 0
+  @media (max-width: 768px)
+    max-width: 230px !important
+    min-width: 230px
   &::-webkit-input-placeholder /* Chrome/Opera/Safari */
     opacity: 1 !important
   &::-moz-placeholder /* Firefox 19+ */

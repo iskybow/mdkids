@@ -1,3 +1,5 @@
+include ../modal/modal
+
 mixin footer()
   +b.footer
     +e('ul').left
@@ -11,3 +13,4 @@ mixin footer()
         +e('a')(href='contacts.html') контакты
     +e('a')(href='#') Обратная связь
     +e('span') Copyright © 2018 MDkidsjewellery
+  +modal()

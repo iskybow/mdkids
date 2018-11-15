@@ -18,8 +18,8 @@
       <div class="header-contacts">
         <div class="header-contacts__left"><a href="tel:88311234567">8 (831) 123-45-67<img src="assets/images/icons/call-answer.svg" alt="" role="presentation"/></a><a href="mailto:info@matthewdanielkidsjewellery.ru">info@matthewdanielkidsjewellery.ru<img src="assets/images/icons/mail.svg" alt="" role="presentation"/></a><a href="#">Instagtam<img src="assets/images/icons/insta.svg" alt="" role="presentation"/></a>
         </div>
-        <div class="header-contacts__right login-none"><a href="#">Вход</a><hr/><a href="#">Регистрация</a>
-        </div><a class="login pc-login" href="cabinet-orders.html">Мой профиль<img src="assets/images/icons/black-male-user-symbol.svg" alt="" role="presentation"/></a>
+        <div class="header-contacts__right"><a class="jsLogin" href="#">Вход</a><hr/><a class="jsReg" href="#">Регистрация</a>
+        </div><a class="login pc-login login-none" href="cabinet-info.html">Мой профиль<img src="assets/images/icons/black-male-user-symbol.svg" alt="" role="presentation"/></a>
       </div><hr/>
       <div class="nav-menu">
         <div class="mob-menu jsMobMenu"><span></span><span></span><span></span>
@@ -27,11 +27,11 @@
         <div class="overlay">
         </div>
         <ul class="nav-menu__left jsMenu">
-          <li class="mob-login"><a class="login" href="cabinet-orders.html">Мой профиль<img src="assets/images/icons/black-male-user-symbol.svg" alt="" role="presentation"/></a>
+          <li class="mob-login"><a class="login login-none" href="cabinet-info.html">Мой профиль<img src="assets/images/icons/black-male-user-symbol.svg" alt="" role="presentation"/></a>
           </li>
-          <li class="mob-login login-none"><a href="#">Вход</a>
+          <li class="mob-login"><a class="jsLogin" href="#">Вход</a>
           </li>
-          <li class="mob-login login-none"><a href="#">Регистрация</a>
+          <li class="mob-login"><a class="jsReg" href="#">Регистрация</a>
           </li>
           <li class="pc-item"><a href="brand.html">о бренде</a>
           </li>
@@ -84,7 +84,7 @@
             </div>
             <!--+b('img')(src='assets/images/icons/magnifying-glass.svg' alt='').jsSearch-->
           </div>
-          <div class="nav-menu__right__basket"><a href="#"><img src="assets/images/icons/cart.svg" alt=""/><span>(3)</span></a>
+          <div class="nav-menu__right__basket"><a href="cabinet-orders.html"><img src="assets/images/icons/cart.svg" alt=""/><span>(3)</span></a>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
         </ul>
         <form class="asks-block">
           <h2>У Вас остались вопросы?
-          </h2><textarea placeholder="Ваше сообщение"></textarea>
+          </h2><textarea name="massage" placeholder="Ваше сообщение"></textarea>
           <button type="submite">Отправить
           </button>
         </form>
@@ -128,6 +128,26 @@
         <li><a href="contacts.html">контакты</a>
         </li>
       </ul><a href="#">Обратная связь</a><span>Copyright © 2018 MDkidsjewellery</span>
+    </div>
+    <div class="modal" id="modal">
+      <div class="overlay-modal">
+      </div>
+      <div class="modal-block">
+        <div class="modal-close"><span></span><span></span>
+        </div>
+        <form class="modal-login">
+          <h2>Авторизация
+          </h2><input type="text" name="email" placeholder="Ваш e-mail"/><input type="password" name="pass" placeholder="Ваш пароль"/>
+          <button type="submit">Войти
+          </button>
+        </form>
+        <form class="modal-reg">
+          <h2>Регистрация
+          </h2><input type="text" name="name" placeholder="Ваше Имя"/><input type="text" name="email" placeholder="Ваш e-mail"/><input type="password" name="pass" placeholder="Ваш пароль"/>
+          <button type="submit">Зарегистрироваться
+          </button>
+        </form>
+      </div>
     </div>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>

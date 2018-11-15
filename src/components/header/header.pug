@@ -8,11 +8,11 @@ mixin header()
           +e('img')(src='assets/images/icons/mail.svg' alt='')
         +e('a')(href='#') Instagtam
           +e('img')(src='assets/images/icons/insta.svg' alt='')
-      +e.right.login-none
-        +e('a')(href='#') Вход
+      +e.right
+        +b('a')(href='#').jsLogin Вход
         +e('hr')
-        +e('a')(href='#') Регистрация
-      +b('a')(href='cabinet-orders.html').login.pc-login Мой профиль
+        +b('a')(href='#').jsReg Регистрация
+      +b('a')(href='cabinet-info.html').login.pc-login.login-none Мой профиль
         +e('img')(src='assets/images/icons/black-male-user-symbol.svg' alt='')
     +b('hr')
     +b.nav-menu
@@ -23,12 +23,12 @@ mixin header()
       +b.overlay
       +e('ul').left.jsMenu
         +b('li').mob-login
-          +b('a')(href='cabinet-orders.html').login Мой профиль
+          +b('a')(href='cabinet-info.html').login.login-none Мой профиль
             +e('img')(src='assets/images/icons/black-male-user-symbol.svg' alt='')
-        +b('li').mob-login.login-none
-          +e('a')(href='#') Вход
-        +b('li').mob-login.login-none
-          +e('a')(href='#') Регистрация
+        +b('li').mob-login
+          +b('a')(href='#').jsLogin Вход
+        +b('li').mob-login
+          +b('a')(href='#').jsReg Регистрация
         +b('li').pc-item
           +e('a')(href='brand.html') о бренде
         +b('li').mob-item.jsParentDropMenu
@@ -77,6 +77,6 @@ mixin header()
               img(src='assets/images/icons/search.svg' alt='')
           //+b('img')(src='assets/images/icons/magnifying-glass.svg' alt='').jsSearch
         +e.right__basket
-          +e('a')(href='#')
+          +e('a')(href='cabinet-orders.html')
             img(src='assets/images/icons/cart.svg' alt='')
             +e('span') (3)

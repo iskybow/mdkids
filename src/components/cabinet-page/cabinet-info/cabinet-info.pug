@@ -10,16 +10,16 @@ mixin cabinet-info()
       +b('form').info-cabinet
         +e('h2') Мои данные
         +e.fio
-          +e('input')(type='text' placeholder='Фамилия').fio__family
-          +e('input')(type='text' placeholder='Имя').fio__name
-          +e('input')(type='text' placeholder='Отчество').fio__patronymic
+          +e('input')(type='text' name='family' placeholder='Фамилия').fio__family
+          +e('input')(type='text' name='name' placeholder='Имя').fio__name
+          +e('input')(type='text' name='patronymic' placeholder='Отчество').fio__patronymic
         +e.mail
           +e('p') Ваш e-mail
-          +b('input')(type='tel' placeholder='Ваш e-mail')
+          +b('input')(type='tel' name='email' placeholder='Ваш e-mail')
           +e('button') Изменить
         +e.phone
           +e('p') Телефон
-          +b('input')(type='tel' placeholder='+7 (___) ___-__-__').jsPhoneMask
+          +b('input')(type='tel' name='tel' placeholder='+7 (___) ___-__-__').jsPhoneMask
         +e.birthday
           +e('p') День рождения
           +e('select').birthday__number.jsBirthday

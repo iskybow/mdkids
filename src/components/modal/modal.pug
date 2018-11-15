@@ -1,0 +1,18 @@
+mixin modal()
+  +b.modal#modal
+    +b.overlay-modal
+    +b.modal-block
+      +b.modal-close
+        +e('span')
+        +e('span')
+      +b('form').modal-login
+        +e('h2') Авторизация
+        +e('input')(type='text' name='email' placeholder='Ваш e-mail')
+        +e('input')(type='password' name='pass' placeholder='Ваш пароль')
+        +e('button')(type='submit') Войти
+      +b('form').modal-reg
+        +e('h2') Регистрация
+        +e('input')(type='text' name='name' placeholder='Ваше Имя')
+        +e('input')(type='text' name='email' placeholder='Ваш e-mail')
+        +e('input')(type='password' name='pass' placeholder='Ваш пароль')
+        +e('button')(type='submit') Зарегистрироваться

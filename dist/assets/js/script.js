@@ -66,6 +66,36 @@ window.onload = function (e) {
   });
 };
 
+$(document).on('click', '.jsLogin', function () {
+  $('body').addClass('body-hidden');
+  $('.modal').addClass('modal-active');
+  $('.modal-reg').addClass('modal-noactive');
+  $('.overlay-modal').addClass('overlay-active');
+});
+
+$(document).on('click', '.jsReg', function () {
+  $('body').addClass('body-hidden');
+  $('.modal').addClass('modal-active');
+  $('.modal-login').addClass('modal-noactive');
+  $('.overlay-modal').addClass('overlay-active');
+});
+
+$(document).on('click', '.overlay-modal', function () {
+  $('body').removeClass('body-hidden');
+  $('.modal').removeClass('modal-active');
+  $('.overlay-modal').removeClass('overlay-active');
+  $('.modal-login').removeClass('modal-noactive');
+  $('.modal-reg').removeClass('modal-noactive');
+});
+
+$(document).on('click', '.modal-close', function () {
+  $('body').removeClass('body-hidden');
+  $('.modal').removeClass('modal-active');
+  $('.overlay-modal').removeClass('overlay-active');
+  $('.modal-login').removeClass('modal-noactive');
+  $('.modal-reg').removeClass('modal-noactive');
+});
+
 $(document).ready(function () {
   if ($('.jsPhoneMask').length > 0) {
     $('.jsPhoneMask').inputmask({ alias: "phoneru" });
@@ -84,21 +114,6 @@ $(document).ready(function () {
     $('.jsLeftGender').addClass('gender-active-label');
     $('.jsRightGender').removeClass('gender-active-label');
   });
-});
-
-$(function () {
-  if (window.innerWidth < 1200) {
-    $('.cabinet-nav').addClass('touch-menu-la');
-    TouchMenuLA({
-      target: document.getElementById('menu'),
-      onOpen: function onOpen() {
-        $('body').addClass('body-overflow');
-      },
-      onClose: function onClose() {
-        $('body').removeClass('body-overflow');
-      }
-    });
-  }
 });
 
 $(document).ready(function () {
@@ -153,6 +168,21 @@ $(document).ready(function () {
     orderBlock.remove();
     totalPrice();
   });
+});
+
+$(function () {
+  if (window.innerWidth < 1200) {
+    $('.cabinet-nav').addClass('touch-menu-la');
+    TouchMenuLA({
+      target: document.getElementById('menu'),
+      onOpen: function onOpen() {
+        $('body').addClass('body-overflow');
+      },
+      onClose: function onClose() {
+        $('body').removeClass('body-overflow');
+      }
+    });
+  }
 });
 
 jQuery(document).ready(function ($) {

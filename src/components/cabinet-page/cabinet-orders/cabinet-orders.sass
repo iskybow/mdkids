@@ -1,0 +1,267 @@
+.cabinet-orders
+  display: block
+  & .container
+    @media (min-width: 810px) and (max-width: 1200px)
+      max-width: 800px
+    //@media (min-width: 768)
+
+.orders
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 870px
+  @media (max-width: 1200px)
+    width: 100%
+  &__head
+    display: flex
+    width: 100%
+    padding-bottom: 20px
+    font-family: 'Cormorant', serif
+    font-size: 21px
+    font-weight: 700
+    color: #282828
+    letter-spacing: 1.05px
+    border-bottom: 1px solid #d1d1d1
+    @media (max-width: 810px)
+      display: none
+    & span:first-child
+      margin-right: 308px
+      @media (max-width: 1200px)
+        margin-right: 280px
+    & span:nth-child(2)
+      margin-right: 93px
+      @media (max-width: 1200px)
+        margin-right: 76px
+    & span:nth-child(3)
+      margin-right: 86px
+  &__total
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    margin: 0 20px
+    margin-top: 35px
+    @media (max-width: 810px)
+      width: 400px
+      margin: 0 auto
+      margin-top: 35px
+    @media (max-width: 425px)
+      flex-direction: column
+      width: 100%
+    &__block
+      display: flex
+      align-items: center
+      & p
+        margin: 0 0 5px
+        font-family: 'Cormorant', serif
+        font-size: 22px
+        font-weight: 700
+        color: #2c2c2c
+        letter-spacing: 1.1px
+      & span
+        margin-left: 5px
+        font-family: 'Cormorant', serif
+        font-size: 16px
+        font-weight: 400
+    & button
+      width: 200px
+      height: 60px
+      font-family: 'Cormorant', serif
+      font-size: 20px
+      font-weight: 700
+      letter-spacing: 2px
+      border: none
+      border-radius: 31px
+      background-color: #dddada
+      cursor: pointer
+      transition: all ease .5s
+      @media (max-width: 425px)
+        margin-top: 10px
+      &:hover
+        color: #ffffff
+        background-color: #723b82
+        transition: all ease .5s
+
+.orders-item
+  display: flex
+  align-items: center
+  width: 100%
+  padding: 30px 0
+  border-bottom: 1px solid #e8e9ed
+  @media (max-width: 810px)
+    align-items: flex-start
+    width: max-content
+    margin: 0 auto
+  @media (max-width: 425px)
+    position: relative
+    flex-direction: column
+    justify-content: flex-start
+    width: auto
+  &__image
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 130px
+    min-width: 130px
+    max-height: 170px
+    min-height: 170px
+    margin-right: 20px
+    background-color: #f8f8f8
+    overflow: hidden
+    @media (max-width: 425px)
+      margin: 0 auto 10px
+    & img
+      object-fit: contain
+  //& > p
+  //  margin-right: 65px
+  //  font-family: 'Cormorant', serif
+  //  font-size: 24px
+  //  font-weight: 700
+  //  color: #242424
+  //  letter-spacing: 0.58px
+  //  & span
+  //    margin-left: 5px
+  //    font-size: 16px
+  //    font-weight: 400
+  &__price
+    display: flex
+    align-items: center
+    @media (max-width: 810px)
+      flex-direction: column
+      align-items: flex-start
+      width: max-content
+    @media (max-width: 425px)
+      align-items: center
+    &__info
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-right: 30px
+      @media (max-width: 425px)
+        align-items: center
+        margin-right: 0
+      & p
+        margin: 0 0 5px
+        font-family: 'Cormorant', serif
+        font-size: 22px
+        font-weight: 700
+        color: #2c2c2c
+        letter-spacing: 1.1px
+      &__color
+        display: flex
+        align-items: center
+        font-family: 'Cormorant-Book', serif
+        font-weight: 400
+        color: #9fa3a7
+        &__circle
+          display: block
+          width: 11px
+          height: 11px
+          margin-top: 4px !important
+          margin-left: 10px !important
+          border-radius: 50%
+    &__number
+      position: relative
+      display: flex
+      align-items: center
+      margin-right: 60px
+      @media (max-width: 810px)
+        margin-right: 0
+        margin-top: 10px
+      & input
+        width: 48px
+        font-family: Arial
+        font-size: 19px
+        padding: 10px 20px
+        font-weight: 400
+        color: #212121
+        text-transform: uppercase
+        letter-spacing: 4.32px
+        text-align: center
+        border-radius: 25px
+        border: 1px solid #eeeeee
+        outline: none
+        @media (max-width: 810px)
+          height: 27px
+          padding: 0 20px
+      & .minus
+        position: absolute
+        top: 8px
+        left: 12px
+        margin: 0
+        font-family: 'Cormorant-Book', serif
+        font-size: 32px
+        font-weight: 400
+        cursor: pointer
+        outline: none
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        @media (max-width: 810px)
+          top: 0
+      & .plus
+        position: absolute
+        top: 8px
+        right: 12px
+        margin: 0
+        font-family: 'Cormorant-Book', serif
+        font-size: 32px
+        font-weight: 400
+        cursor: pointer
+        outline: none
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        @media (max-width: 810px)
+          top: 0
+    &__allsumm, &__price-summ
+      display: flex
+      align-items: center
+      width: 100px
+      margin-right: 43px
+      & p
+        @media (max-width: 810px)
+          margin: 10px 0
+    &__price-summ
+      @media (max-width: 810px)
+        display: none
+        margin-right: 100px
+    &__allsumm
+      @media (max-width: 810px)
+        margin-right: 0
+      @media (max-width: 425px)
+        justify-content: center
+  & p
+    font-family: 'Cormorant', serif
+    font-size: 24px
+    font-weight: 700
+    color: #242424
+    letter-spacing: 0.58px
+  & span
+    margin-top: 9px
+    margin-left: 5px
+    font-size: 16px
+    font-weight: 400
+  & button
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+    border: 1px solid #9c9c9c
+    border-radius: 50%
+    background: transparent
+    outline: none
+    cursor: pointer
+    @media (max-width: 425px)
+      position: absolute
+      right: -25px
+    & img
+      width: 11px
+      height: 11px
+      margin: 10px

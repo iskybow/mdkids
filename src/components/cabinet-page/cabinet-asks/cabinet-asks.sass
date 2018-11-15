@@ -1,0 +1,42 @@
+.cabinet-asks
+	display: block
+
+.asks-block
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 870px
+  @media (max-width: 1200px)
+    width: 100%
+  & h2
+    width: 100%
+    padding-bottom: 20px
+    font-family: 'Cormorant', serif
+    font-size: 21px
+    font-weight: 700
+    letter-spacing: 1.05px
+    border-bottom: 1px solid #d1d1d1
+  & textarea
+    width: 777px
+    height: 150px
+    margin-top: 70px
+    padding: 15px 30px
+    @media (max-width: 1200px)
+      width: calc(100% - 60px)
+  & button
+    width: 200px
+    height: 60px
+    margin-top: 35px
+    font-family: 'Cormorant', serif
+    font-size: 20px
+    font-weight: 700
+    letter-spacing: 2px
+    border: none
+    border-radius: 31px
+    background-color: #dddada
+    cursor: pointer
+    transition: all ease .5s
+    &:hover
+      color: #ffffff
+      background-color: #723b82
+      transition: all ease .5s

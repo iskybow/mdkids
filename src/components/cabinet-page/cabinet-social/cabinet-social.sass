@@ -1,0 +1,51 @@
+.cabinet-social
+  display: block
+
+.social-block
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 870px
+  @media (max-width: 1200px)
+    width: 100%
+  & h2
+    width: 100%
+    padding-bottom: 20px
+    font-family: 'Cormorant', serif
+    font-size: 21px
+    font-weight: 700
+    letter-spacing: 1.05px
+    border-bottom: 1px solid #d1d1d1
+.soc
+  display: flex
+  align-items: center
+  width: 100%
+  @media (max-width: 992px)
+    flex-direction: column
+  &__block
+    display: flex
+    align-items: center
+    margin-right: auto
+    @media (max-width: 992px)
+      margin-bottom: 10px
+    &:last-child
+      margin-right: 0
+      @media (max-width: 992px)
+        margin-right: auto
+    &__image
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 30px
+      height: 30px
+      margin-right: 13px
+      background-color: #dddada
+      border-radius: 50%
+      & img
+        width: 50%
+        height: auto
+    & a
+      font-family: 'Cormorant-Semibold', serif
+      font-size: 18px
+      font-weight: 400
+      letter-spacing: 1.8px

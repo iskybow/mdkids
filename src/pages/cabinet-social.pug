@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/cabinet-page/cabinet-social/cabinet-social
+include ../components/footer/footer
+
+block head
+  - var pageTitle = 'Main';
+
+block content
+  +header()
+  +cabinet-social()
+  +footer()

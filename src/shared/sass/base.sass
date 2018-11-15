@@ -14,9 +14,16 @@ body
     display: flex
     align-items: center
     flex-wrap: wrap
+  &_cabinet
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
 
 .m-1
   margin: 50px auto
+
+.mb-cabinet
+  margin-bottom: 110px
 
 @media (min-width: 576px)
   .container
@@ -186,3 +193,83 @@ input:-moz-placeholder /* Firefox 18- */
 .news-height
   height: 100px
   overflow: hidden
+
+.cabinet-head
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100px
+  margin-bottom: 100px
+  text-align: center
+  background-color: #723b82
+  & h2
+    font-family: 'Cormorant-Book', serif
+    font-size: 30px
+    font-weight: 400
+    color: #ffffff
+    letter-spacing: 1.5px
+    line-height: 0.8
+    & span
+      margin-left: 10px
+      font-family: 'Cormorant', serif
+      font-weight: 700
+
+input
+  margin: 7px 0
+  padding: 14px 45px
+  font-family: 'Cormorant', serif
+  font-size: 19px
+  border-radius: 28px
+  border: 1px solid #e8e8e8
+  outline: none
+
+textarea
+  padding: 14px 45px
+  font-family: 'Cormorant', serif
+  font-size: 19px
+  border-radius: 5px
+  border: 1px solid #e8e8e8
+  outline: none
+  resize: none
+
+button
+  outline: none
+
+.select2-container
+  width: auto !important
+  margin-right: 20px
+  outline: none
+
+.select2-container--default .select2-selection--single
+  display: flex
+  align-items: center
+  height: 50px
+  border-radius: 25px
+  border: 1px solid #eeeeee
+  outline: none
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+  width: 70px
+  padding: 11px 25px
+  outline: none
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+  top: auto
+  right: 23px
+  width: 10px
+  height: 14px
+  background: url("../images/arrow_next.png") no-repeat 50% 50%
+  background-size: contain
+  transform: rotate(90deg)
+  & b
+    display: none
+
+.select2-container--open .select2-selection--single .select2-selection__arrow
+  transform: rotate(-90deg)
+
+.select2-dropdown
+  border: 1px solid #eeeeee
+  border-radius: 25px
+
+.select2-search--dropdown
+  display: none

@@ -66,36 +66,130 @@ window.onload = function (e) {
   });
 };
 
-jQuery(document).ready(function ($) {
+$(document).ready(function () {
+  if ($('.jsPhoneMask').length > 0) {
+    $('.jsPhoneMask').inputmask({ alias: "phoneru" });
+  }
 
-  $(".mainNewsDot").dotdotdot({
-    callback: function callback(isTruncated) {},
-    /* Function invoked after truncating the text.
-       Inside this function, "this" refers to the wrapper. */
+  $('.jsBirthday').select2();
 
-    ellipsis: '\u2026 ',
-    /* The text to add as ellipsis. */
-
-    height: 120,
-    /* The (max-)height for the wrapper:
-       null: measure the CSS (max-)height ones;
-       a number: sets a specific height in pixels;
-       "watch": re-measures the CSS (max-)height in the "watch". */
-
-    keep: null,
-    /* jQuery-selector for elements to keep after the ellipsis. */
-
-    tolerance: 0,
-    /* Deviation for the measured wrapper height. */
-
-    truncate: "word",
-    /* How to truncate the text: By "node", "word" or "letter". */
-
-    watch: "window"
-    /* Whether to update the ellipsis:
-       true: Monitors the wrapper width and height;
-       "window": Monitors the window width and height. */
+  $('.jsRightGender').click(function () {
+    $('.jsGenderSwitch').addClass('gender-switch-right');
+    $('.jsLeftGender').removeClass('gender-active-label');
+    $('.jsRightGender').addClass('gender-active-label');
   });
+
+  $('.jsLeftGender').click(function () {
+    $('.jsGenderSwitch').removeClass('gender-switch-right');
+    $('.jsLeftGender').addClass('gender-active-label');
+    $('.jsRightGender').removeClass('gender-active-label');
+  });
+});
+
+$(function () {
+  if (window.innerWidth < 1200) {
+    $('.cabinet-nav').addClass('touch-menu-la');
+    TouchMenuLA({
+      target: document.getElementById('menu'),
+      onOpen: function onOpen() {
+        $('body').addClass('body-overflow');
+      },
+      onClose: function onClose() {
+        $('body').removeClass('body-overflow');
+      }
+    });
+  }
+});
+
+$(document).ready(function () {
+  function totalPrice() {
+    var total = document.querySelector('.jsTotal');
+    var sumPrice = document.querySelectorAll('.jsSummOrders');
+    var allPriceSumm = 0;
+    for (var i = 0; i < sumPrice.length; i++) {
+      var sumPriceHTML = Number(sumPrice[i].innerHTML);
+      allPriceSumm += sumPriceHTML;
+    }
+    total.innerHTML = allPriceSumm;
+  }
+  if ($('.jsTotal').length > 0) {
+    totalPrice();
+  }
+
+  $('.minus').click(function () {
+    var $input = $(this).parent().find('input');
+    if ($input.val() > 1) {
+      $input[0].setAttribute('value', Number($input[0].value) - 1);
+      var parent = this.closest('.orders-item');
+      var priceOneProdust = parent.querySelector('.jsPriceOrders');
+      var priceOneProdustHTML = Number(priceOneProdust.innerHTML);
+      var sumPrice = parent.querySelector('.jsSummOrders');
+      var sumPriceHTML = Number(sumPrice.innerHTML);
+      sumPriceHTML -= priceOneProdustHTML;
+      sumPrice.innerHTML = sumPriceHTML;
+    }
+    $input.change;
+    totalPrice();
+    return false;
+  });
+  $('.plus').click(function () {
+    var $input = $(this).parent().find('input');
+    // $input.val(parseInt($input.val()) + 1);
+    $input[0].setAttribute('value', Number($input[0].value) + 1);
+    $input.change;
+    var parent = this.closest('.orders-item');
+    var priceOneProdust = parent.querySelector('.jsPriceOrders');
+    var priceOneProdustHTML = Number(priceOneProdust.innerHTML);
+    var sumPrice = parent.querySelector('.jsSummOrders');
+    var sumPriceHTML = Number(sumPrice.innerHTML);
+    sumPriceHTML += priceOneProdustHTML;
+    sumPrice.innerHTML = sumPriceHTML;
+    totalPrice();
+    return false;
+  });
+
+  $('.jsDeleteOrder').click(function () {
+    var orderBlock = this.closest('.orders-item');
+    orderBlock.remove();
+    totalPrice();
+  });
+});
+
+jQuery(document).ready(function ($) {
+  jQuery(document).ready(function ($) {
+    dotDot();
+  });
+
+  function dotDot() {
+    $(".mainNewsDot").dotdotdot({
+      callback: function callback(isTruncated) {},
+      /* Function invoked after truncating the text.
+         Inside this function, "this" refers to the wrapper. */
+
+      ellipsis: '\u2026 ',
+      /* The text to add as ellipsis. */
+
+      height: 120,
+      /* The (max-)height for the wrapper:
+         null: measure the CSS (max-)height ones;
+         a number: sets a specific height in pixels;
+         "watch": re-measures the CSS (max-)height in the "watch". */
+
+      keep: null,
+      /* jQuery-selector for elements to keep after the ellipsis. */
+
+      tolerance: 0,
+      /* Deviation for the measured wrapper height. */
+
+      truncate: "word",
+      /* How to truncate the text: By "node", "word" or "letter". */
+
+      watch: "window"
+      /* Whether to update the ellipsis:
+         true: Monitors the wrapper width and height;
+         "window": Monitors the window width and height. */
+    });
+  }
 });
 
 $('.jsForSlider').slick({
@@ -314,26 +408,28 @@ var initPhotoSwipeFromDOM = function initPhotoSwipeFromDOM(gallerySelector) {
 // execute above function
 initPhotoSwipeFromDOM('.jsForSlider');
 
-$('.jsSliderProduct').slick({
-  dots: false,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  prevArrow: '<button type="button" class="slick-prev"><img src="assets/images/arrow_next.png" alt=""></button>',
-  nextArrow: '<button type="button" class="slick-next"><img src="assets/images/arrow_next.png" alt=""></button>',
-  responsive: [{
-    breakpoint: 992,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 1
-    }
-  }, {
-    breakpoint: 576,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1
-    }
-  }]
-});
+if ($('.collections-items__item').length > 3) {
+  $('.jsSliderProduct').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><img src="assets/images/arrow_next.png" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="assets/images/arrow_next.png" alt=""></button>',
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+}
 //# sourceMappingURL=script.js.map

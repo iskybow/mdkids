@@ -75,6 +75,22 @@
       @media (max-width: 576px)
         margin: 5px 0
 
+.login
+  display: flex
+  flex-direction: row-reverse
+  align-items: center
+  & img
+    width: 14px
+    height: 16px
+    margin-right: 10px
+
+.pc-login
+  @media (max-width: 450px)
+    display: none
+
+.login-none
+  display: none !important
+
 .nav-menu
   position: relative
   display: flex
@@ -304,6 +320,11 @@
     @media (min-width: 993px)
       position: relative
       right: 0
+    @media (max-width: 992px) and (min-width: 769px)
+      right: -22px
+      margin: 0
+    @media (max-width: 768px)
+      margin: 0
     &::-webkit-input-placeholder /* Chrome/Opera/Safari */
       opacity: 0
     &::-moz-placeholder /* Firefox 19+ */
@@ -329,7 +350,7 @@
   @media (min-width: 993px)
     right: 15px !important
   @media (max-width: 992px)
-    right: 14px !important
+    right: -10px !important
   @media (max-width: 768px)
     right: -130px !important
 
@@ -345,7 +366,7 @@
   padding: 11px 40px 11px 20px !important
   transition: all ease 1s
   @media (min-width: 769px)
-    right: 0
+    right: -25px
   @media (max-width: 768px)
     max-width: 230px !important
     min-width: 230px

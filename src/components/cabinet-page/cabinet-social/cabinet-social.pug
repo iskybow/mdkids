@@ -1,0 +1,24 @@
+include ../cabinet-nav/cabinet-nav
+
+mixin cabinet-social()
+  +b.cabinet-social.mb-cabinet
+    +b.cabinet-head
+      +e('h2') Здравствуйте,
+        +e('span') Евгения Бухтиярова
+    +b.container_cabinet
+      +cabinet-nav()
+      +b.social-block
+        +e('h2') Профили в социальных сетях
+        +b.soc
+          +e.block
+            +e.block__image
+              +e('img')(src='assets/images/icons/facebook-logo.svg' alt='')
+            +e('a')(href='#') buhtiyarova.evgeniya
+          +e.block
+            +e.block__image
+              +e('img')(src='assets/images/icons/vk-logo.svg' alt='')
+            +e('a')(href='#') buhtiyarova.evgeniya
+          +e.block
+            +e.block__image
+              +e('img')(src='assets/images/icons/instagram-logo.svg' alt='')
+            +e('a')(href='#') buhtiyarova.evgeniya

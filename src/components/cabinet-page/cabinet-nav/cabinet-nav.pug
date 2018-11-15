@@ -1,0 +1,14 @@
+mixin cabinet-nav()
+  +b('ul').cabinet-nav#menu
+    +e('li')
+      +b('a')(href='cabinet-orders.html').cabinet-nav-active Мои заказы
+    +e('li')
+      +e('a')(href='cabinet-info.html') Моя информация
+    +e('li')
+      +b('a')(href='cabinet-password.html') Изменить пароль
+    +e('li')
+      +b('a')(href='cabinet-social.html') Профили в социальных сетях
+    +e('li')
+      +b('a')(href='cabinet-asks.html') Нужна помощь?
+    +e('li')
+      +b('a')(href='#') Выйти

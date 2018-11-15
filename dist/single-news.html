@@ -7,8 +7,9 @@
     <title>Main</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" rel="stylesheet">
+    <link href="assets/css/touch-menu-la.css" rel="stylesheet">
     <link href="assets/css/slick.css" rel="stylesheet">
-    <!--link(href='assets/css/slick-theme.css' rel='stylesheet')-->
+    <link href="assets/css/select2.min.css" rel="stylesheet">
     <link href="assets/fonts/fonts.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
@@ -17,8 +18,8 @@
       <div class="header-contacts">
         <div class="header-contacts__left"><a href="tel:88311234567">8 (831) 123-45-67<img src="assets/images/icons/call-answer.svg" alt="" role="presentation"/></a><a href="mailto:info@matthewdanielkidsjewellery.ru">info@matthewdanielkidsjewellery.ru<img src="assets/images/icons/mail.svg" alt="" role="presentation"/></a><a href="#">Instagtam<img src="assets/images/icons/insta.svg" alt="" role="presentation"/></a>
         </div>
-        <div class="header-contacts__right"><a href="#">Вход</a><hr/><a href="#">Регистрация</a>
-        </div>
+        <div class="header-contacts__right login-none"><a href="#">Вход</a><hr/><a href="#">Регистрация</a>
+        </div><a class="login pc-login" href="cabinet-orders.html">Мой профиль<img src="assets/images/icons/black-male-user-symbol.svg" alt="" role="presentation"/></a>
       </div><hr/>
       <div class="nav-menu">
         <div class="mob-menu jsMobMenu"><span></span><span></span><span></span>
@@ -26,9 +27,11 @@
         <div class="overlay">
         </div>
         <ul class="nav-menu__left jsMenu">
-          <li class="mob-login"><a href="#">Вход</a>
+          <li class="mob-login"><a class="login" href="cabinet-orders.html">Мой профиль<img src="assets/images/icons/black-male-user-symbol.svg" alt="" role="presentation"/></a>
           </li>
-          <li class="mob-login"><a href="#">Регистрация</a>
+          <li class="mob-login login-none"><a href="#">Вход</a>
+          </li>
+          <li class="mob-login login-none"><a href="#">Регистрация</a>
           </li>
           <li class="pc-item"><a href="brand.html">о бренде</a>
           </li>
@@ -226,6 +229,12 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/hammer.js"></script>
+    <script src="assets/js/touch-menu-la.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.inputmask.bundle.js"></script>
+    <script src="assets/js/phone.js"></script>
+    <script src="assets/js/phone-ru.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.dotdotdot.js"></script>
     <script src="assets/js/script.js"></script><div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

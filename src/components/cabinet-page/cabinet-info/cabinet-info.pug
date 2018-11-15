@@ -1,0 +1,47 @@
+include ../cabinet-nav/cabinet-nav
+
+mixin cabinet-info()
+  +b.cabinet-info.mb-cabinet
+    +b.cabinet-head
+      +e('h2') Здравствуйте,
+        +e('span') Евгения Бухтиярова
+    +b.container_cabinet
+      +cabinet-nav()
+      +b('form').info-cabinet
+        +e('h2') Мои данные
+        +e.fio
+          +e('input')(type='text' placeholder='Фамилия').fio__family
+          +e('input')(type='text' placeholder='Имя').fio__name
+          +e('input')(type='text' placeholder='Отчество').fio__patronymic
+        +e.mail
+          +e('p') Ваш e-mail
+          +b('input')(type='tel' placeholder='Ваш e-mail')
+          +e('button') Изменить
+        +e.phone
+          +e('p') Телефон
+          +b('input')(type='tel' placeholder='+7 (___) ___-__-__').jsPhoneMask
+        +e.birthday
+          +e('p') День рождения
+          +e('select').birthday__number.jsBirthday
+            +e('option') 1
+            +e('option') 2
+            +e('option') 3
+          +e('select').birthday__month.jsBirthday
+            +e('option') Январь
+            +e('option') Февраль
+            +e('option') Март
+          +e('select').birthday__year.jsBirthday
+            +e('option') 1994
+            +e('option') 1995
+            +e('option') 1996
+        +e.gender
+          +e('p') Пол
+          +b.gender-block
+            +b.gender-switch.jsGenderSwitch
+            +b.left-gender
+              +b('input')(type='radio' name='radio' checked).radio#radio1
+              +b('label')(for='radio1').jsLeftGender.gender-active-label Мужской
+            +b.right-gender
+              +b('input')(type='radio' name='radio').radio#radio2
+              +b('label')(for='radio2').jsRightGender Женский
+        +e('button').save Сохранить

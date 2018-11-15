@@ -1,0 +1,100 @@
+include ../cabinet-nav/cabinet-nav
+
+mixin cabinet-orders()
+  +b('section').cabinet-orders.mb-cabinet
+    +b.cabinet-head
+      +e('h2') Здравствуйте,
+        +e('span') Евгения Бухтиярова
+    +b.container_cabinet
+      +cabinet-nav()
+      +b.orders
+        +e.head
+          +e('span') Товар
+          +e('span') Цена
+          +e('span') Кол-во
+          +e('span') Итого
+        +b.orders-item
+          +e.image
+            +e('img')(src='assets/images/orders_image.png' alt='')
+          +e.price
+            +e.price__info
+              +e('p') Подвеска “Конёк”
+              +e('span').price__info__color цвет
+                +e('span')(style='background-color: #dbdad8;').price__info__color__circle
+            +e.price__price-summ
+              +b('p').jsPriceOrders 3500
+              +e('span') руб.
+            +e.price__number
+              +b('span').minus -
+              +b('input')(type='text' value='1').num
+              +b('span').plus +
+            +e.price__allsumm
+              +b('p').jsSummOrders 3500
+              +e('span') руб.
+          +b('button').jsDeleteOrder
+            +e('img')(src='assets/images/icons/cancel.svg' alt='')
+        +b.orders-item
+          +e.image
+            +e('img')(src='assets/images/orders_image.png' alt='')
+          +e.price
+            +e.price__info
+              +e('p') Подвеска “Конёк”
+              +e('span').price__info__color цвет
+                +e('span')(style='background-color: #dbdad8;').price__info__color__circle
+            +e.price__price-summ
+              +b('p').jsPriceOrders 3500
+              +e('span') руб.
+            +e.price__number
+              +b('span').minus -
+              +b('input')(type='text' value='1').num
+              +b('span').plus +
+            +e.price__allsumm
+              +b('p').jsSummOrders 3500
+              +e('span') руб.
+          +b('button').jsDeleteOrder
+            +e('img')(src='assets/images/icons/cancel.svg' alt='')
+        +b.orders-item
+          +e.image
+            +e('img')(src='assets/images/orders_image.png' alt='')
+          +e.price
+            +e.price__info
+              +e('p') Подвеска “Конёк”
+              +e('span').price__info__color цвет
+                +e('span')(style='background-color: #dbdad8;').price__info__color__circle
+            +e.price__price-summ
+              +b('p').jsPriceOrders 3500
+              +e('span') руб.
+            +e.price__number
+              +b('span').minus -
+              +b('input')(type='text' value='1').num
+              +b('span').plus +
+            +e.price__allsumm
+              +b('p').jsSummOrders 3500
+              +e('span') руб.
+          +b('button').jsDeleteOrder
+            +e('img')(src='assets/images/icons/cancel.svg' alt='')
+        +b.orders-item
+          +e.image
+            +e('img')(src='assets/images/orders_image.png' alt='')
+          +e.price
+            +e.price__info
+              +e('p') Подвеска “Конёк”
+              +e('span').price__info__color цвет
+                +e('span')(style='background-color: #dbdad8;').price__info__color__circle
+            +e.price__price-summ
+              +b('p').jsPriceOrders 3500
+              +e('span') руб.
+            +e.price__number
+              +b('span').minus -
+              +b('input')(type='text' value='1').num
+              +b('span').plus +
+            +e.price__allsumm
+              +b('p').jsSummOrders 3500
+              +e('span') руб.
+          +b('button').jsDeleteOrder
+            +e('img')(src='assets/images/icons/cancel.svg' alt='')
+        +e.total
+          +e.total__block
+            +b('p').jsTotal
+            +e('span') руб.
+          +b('button') Заказать

@@ -1,0 +1,13 @@
+include ../cabinet-nav/cabinet-nav
+
+mixin cabinet-asks()
+  +b.cabinet-asks.mb-cabinet
+    +b.cabinet-head
+      +e('h2') Здравствуйте,
+        +e('span') Евгения Бухтиярова
+    +b.container_cabinet
+      +cabinet-nav()
+      +b('form').asks-block
+        +e('h2') У Вас остались вопросы?
+        +e('textarea')(placeholder='Ваше сообщение')
+        +e('button')(type='submite') Отправить

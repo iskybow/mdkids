@@ -116,6 +116,21 @@ $(document).ready(function () {
   });
 });
 
+$(function () {
+  if (window.innerWidth < 1200) {
+    $('.cabinet-nav').addClass('touch-menu-la');
+    TouchMenuLA({
+      target: document.getElementById('menu'),
+      onOpen: function onOpen() {
+        $('body').addClass('body-overflow');
+      },
+      onClose: function onClose() {
+        $('body').removeClass('body-overflow');
+      }
+    });
+  }
+});
+
 $(document).ready(function () {
   function totalPrice() {
     var total = document.querySelector('.jsTotal');
@@ -168,21 +183,6 @@ $(document).ready(function () {
     orderBlock.remove();
     totalPrice();
   });
-});
-
-$(function () {
-  if (window.innerWidth < 1200) {
-    $('.cabinet-nav').addClass('touch-menu-la');
-    TouchMenuLA({
-      target: document.getElementById('menu'),
-      onOpen: function onOpen() {
-        $('body').addClass('body-overflow');
-      },
-      onClose: function onClose() {
-        $('body').removeClass('body-overflow');
-      }
-    });
-  }
 });
 
 jQuery(document).ready(function ($) {

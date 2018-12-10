@@ -1,0 +1,84 @@
+mixin header-main()
+  +b.header.header-main
+    +b.header-contacts
+      +e.left
+        +e('a')(href='tel:88311234567') 8 (831) 123-45-67
+          +e('img')(src='assets/images/icons/call-answer.svg' alt='')
+        +e('a')(href='mailto:info@matthewdanielkidsjewellery.ru') info@matthewdanielkidsjewellery.ru
+          +e('img')(src='assets/images/icons/mail.svg' alt='')
+        +e('a')(href='https://www.instagram.com/md_kidsjewellery' target='_blank') Instagtam
+          +e('img')(src='assets/images/icons/insta.svg' alt='')
+      +e.right
+        +b('a')(href='#').jsLogin Вход
+        +e('hr')
+        +b('a')(href='#').jsReg Регистрация
+      +b('a')(href='cabinet-info.html').login.pc-login.login-none Мой профиль
+        +e('img')(src='assets/images/icons/black-male-user-symbol.svg' alt='')
+    +b('hr')
+    +b.nav-menu
+      +b.mob-menu.jsMobMenu
+        +e('span')
+        +e('span')
+        +e('span')
+      +b.overlay
+      +e('ul').left.jsMenu
+        +b('li').mob-login
+          +b('a')(href='cabinet-info.html').login.login-none Мой профиль
+            +e('img')(src='assets/images/icons/black-male-user-symbol.svg' alt='')
+        +b('li').mob-login
+          +b('a')(href='#').jsLogin Вход
+        +b('li').mob-login
+          +b('a')(href='#').jsReg Регистрация
+        +b('li').pc-item
+          +e('a')(href='brand.html') о бренде
+        +b('li').mob-item.jsParentDropMenu
+          +b('p').jsDropOpen о компании
+            img(src='assets/images/arrow.png' alt='')
+          +b('ul').drop-menu.jsDropClose
+            +e('li')
+              +e('a')(href='brand.html') о бренде
+            +e('li')
+              +e('a')(href='partners.html') партнеры
+            +e('li')
+              +e('a')(href='news.html') новости
+        +b('li').jsParentDropMenu
+          +b('p').hover-menu.jsDropOpen коллекции
+            img(src='assets/images/arrow.png' alt='')
+            img(src='assets/images/icons/down-arrow.svg' alt='')
+          +b('ul').drop-menu.jsDropClose
+            +e('li')
+              +e('a')(href='category.html') Серьги
+            +e('li')
+              +e('a')(href='category.html') Подвески
+            +e('li')
+              +e('a')(href='category.html') Браслеты
+            +e('li')
+              +e('a')(href='category.html') Цепочки
+            +e('li')
+              +e('a')(href='category.html') Гайтаны
+        +b('li').pc-item
+          +e('a')(href='partners.html') партнеры
+        +b('li').pc-item
+          +e('a')(href='news.html') новости
+        +e('li')
+          +e('a')(href='contacts.html') контакты
+      +e('a')(href='/')
+        //+e('img')(src='assets/images/icons/logo.svg' alt='')
+        +e('img')(src='assets/images/webMnD_logoPANTONEpodpis.png' alt='')
+        +b('span').letterR R
+      +e.right
+        +e.right__land
+          +e('select')
+            +e('option') Rus
+            +e('option') En
+        +e.right__search
+          +b.search-block.jsSearchBlock
+            +e('span').search-open.jsSearchOpen
+            +e('input')(type='text' placeholder='Поиск')
+            +e('a')(href='#')
+              img(src='assets/images/icons/search.svg' alt='')
+          //+b('img')(src='assets/images/icons/magnifying-glass.svg' alt='').jsSearch
+        +e.right__basket
+          +e('a')(href='cabinet-orders.html')
+            img(src='assets/images/icons/cart.svg' alt='')
+            +e('span') (3)

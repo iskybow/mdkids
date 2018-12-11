@@ -114,6 +114,21 @@ $(document).on('click', '.modal-close', function () {
 // });
 
 
+$(function () {
+  if (window.innerWidth < 1200) {
+    $('.cabinet-nav').addClass('touch-menu-la');
+    TouchMenuLA({
+      target: document.getElementById('menu'),
+      onOpen: function onOpen() {
+        $('body').addClass('body-overflow');
+      },
+      onClose: function onClose() {
+        $('body').removeClass('body-overflow');
+      }
+    });
+  }
+});
+
 $(document).ready(function () {
   if ($('.jsPhoneMask').length > 0) {
     $('.jsPhoneMask').inputmask({ alias: "phoneru" });
@@ -132,21 +147,6 @@ $(document).ready(function () {
     $('.jsLeftGender').addClass('gender-active-label');
     $('.jsRightGender').removeClass('gender-active-label');
   });
-});
-
-$(function () {
-  if (window.innerWidth < 1200) {
-    $('.cabinet-nav').addClass('touch-menu-la');
-    TouchMenuLA({
-      target: document.getElementById('menu'),
-      onOpen: function onOpen() {
-        $('body').addClass('body-overflow');
-      },
-      onClose: function onClose() {
-        $('body').removeClass('body-overflow');
-      }
-    });
-  }
 });
 
 $(document).ready(function () {

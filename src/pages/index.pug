@@ -1,5 +1,5 @@
 extends ../components/layout-default/layout-default
-include ../components/header/header
+include ../components/header-main/header-main
 include ../components/main/banner/banner
 include ../components/main/collections/collections
 include ../components/main/about-brand/about-brand
@@ -10,7 +10,7 @@ block head
     - var pageTitle = 'Main';
 
 block content
-  +header()
+  +header-main()
   +banner()
   +collections()
   +about-brand()

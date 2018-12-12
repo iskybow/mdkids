@@ -14,10 +14,31 @@
     width: 60%
   @media (max-width: 992px)
     width: 100%
+  @media (max-width: 768px)
+    align-items: center
   & .product-slider
+    position: relative
+    display: flex
+    align-items: center
     //margin-right: auto
+    width: 430px
+    @media (max-width: 440px)
+      width: 300px
+    & .slick-prev
+      position: absolute
+      left: -30px
+      background: none
+      border: none
+      cursor: pointer
+      transform: rotate(180deg)
+    & .slick-next
+      position: absolute
+      right: -30px
+      background: none
+      border: none
+      cursor: pointer
     &__image-block
-      width: 100px !important
+      //width: 100px !important
       height: 100px !important
       border: 1px solid #e8e8e8
       margin: 10px

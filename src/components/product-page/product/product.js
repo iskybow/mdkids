@@ -10,8 +10,28 @@ $('.jsNavSlider').slick({
   slidesToScroll: 1,
   asNavFor: '.jsForSlider',
   dots: false,
+  prevArrow: '<button type="button" class="slick-prev"><img src="assets/images/arrow_next.png" alt=""></button>',
+  nextArrow: '<button type="button" class="slick-next"><img src="assets/images/arrow_next.png" alt=""></button>',
   // centerMode: true,
-  focusOnSelect: true
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 425,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    }
+  ]
 });
 
 

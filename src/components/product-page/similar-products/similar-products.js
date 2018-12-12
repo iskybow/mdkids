@@ -16,7 +16,7 @@ if ($('.collections-items__item').length > 3) {
         }
       },
       {
-        breakpoint: 576,
+        breakpoint: 425,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
